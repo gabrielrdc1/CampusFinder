@@ -12,6 +12,21 @@
         android:theme="@style/Theme.ProjetoTrabalho"
         tools:targetApi="31">
         <activity
+            android:name=".CalcularGastos"
+            android:exported="false" />
+        <activity
+            android:name=".TelaFaculdades"
+            android:exported="false" />
+        <activity
+            android:name=".TelaTransportes"
+            android:exported="false" />
+        <activity
+            android:name=".TelaMoradias"
+            android:exported="false" />
+        <activity
+            android:name=".TelaMercados"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

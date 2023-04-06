@@ -14,5 +14,6 @@
     <color name="cor_moradias">#BF8000FF</color>color>
     <color name="cor_tranportes">#BF003FFF</color>color>
     <color name="cor_faculdades">#00DC84</color>color>
+    <color name="red">#FF0000</color>
 
 </resources>
