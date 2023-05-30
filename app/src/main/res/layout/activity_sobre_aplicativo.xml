@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cor_mercados"
+    tools:context=".sobreAplicativo">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="405dp"
+        android:layout_height="184dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_sobre_app"
+        app:layout_constraintVertical_bias="0.157"
+        app:srcCompat="@drawable/logo" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sobre_app"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/shape_container_laranja2"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_encontre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="CAMPUS FINDER"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_sobre_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_sobre_app" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_container_white2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:justificationMode="inter_word"
+            android:text="Campus Finder"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="394dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="414dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="3.5"
+        android:background="@drawable/shape_container_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="370dp"
+            android:layout_height="400dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="Olá! O nosso aplicativo tem como objetivo facilitar a vida dos estudantes que estão vindo de fora para estudar em Bauru. Com ele, você terá acesso a todas as informações que precisa para se estabelecer na cidade. O aplicativo oferece informações sobre faculdades, moradias, pontos de ônibus e mercados/alimentação, tudo em um só lugar. Além disso, você poderá utilizar a funcionalidade de calcular gastos para ter uma ideia de quanto vai gastar por mês com todas essas despesas. Esperamos que o nosso aplicativo seja útil e facilite a sua vida enquanto você estuda em Bauru."
+            android:textAlignment="viewStart"
+            android:textColor="@color/laranja"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="394dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

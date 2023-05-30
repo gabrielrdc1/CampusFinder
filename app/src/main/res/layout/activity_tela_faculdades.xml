@@ -4,30 +4,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape_app_faculdades"
+    android:background="@color/laranja"
     tools:context=".TelaFaculdades">
 
-    <TextView
-        android:id="@+id/text_encontre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ENCONTRE SUA FACULDADE IDEAL"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_encontre"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_container_laranja2"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnMostrarMapaFaculdades"
+        android:layout_width="146dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/mapa" />
+
+    <TextView
+        android:id="@+id/textMoradias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAPA FACULDADES"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1px"
         app:layout_constraintBottom_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnUsc"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.267"
+        app:srcCompat="@drawable/unisagrado" />
+
+    <ImageView
+        android:id="@+id/btnAnhanguera"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267"
+        app:srcCompat="@drawable/anhanguera" />
+
+    <ImageView
+        android:id="@+id/btnUninove"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479"
+        app:srcCompat="@drawable/uninove" />
+
+    <ImageView
+        android:id="@+id/btnUsp"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479"
+        app:srcCompat="@drawable/usp" />
+
+    <ImageView
+        android:id="@+id/btnIte"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685"
+        app:srcCompat="@drawable/ite" />
+
+    <ImageView
+        android:id="@+id/btnFib"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685"
+        app:srcCompat="@drawable/fib" />
+
+    <ImageView
+        android:id="@+id/btnUnip"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        app:srcCompat="@drawable/unip" />
+
+    <ImageView
+        android:id="@+id/btnUnesp"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/imageborderwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896"
+        app:srcCompat="@drawable/unesp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

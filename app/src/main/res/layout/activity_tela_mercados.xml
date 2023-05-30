@@ -4,30 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape_app_faculdades"
+    android:background="@color/white"
     tools:context=".TelaMercados">
 
-    <TextView
-        android:id="@+id/text_encontre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ENCONTRE MERCADOS PRÓXIMOS A VOCÊ"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+
+    <ImageView
+        android:id="@+id/ImagemMercado"
+        android:layout_width="406dp"
+        android:layout_height="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257"
+        app:srcCompat="@drawable/mercado"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_encontre"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_container_laranja2"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/btnMostrarMapaMercados"
+        android:layout_width="146dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/mapa" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAPA MERCADOS"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
     <View
         android:id="@+id/view"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="1px"
-        app:layout_constraintBottom_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="414dp"
+        android:layout_height="332dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="3.5"
+        android:background="@drawable/shape_container_laranja"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="370dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="Olá! Esta tela tem como objetivo ajudá-lo a localizar os mercados em Bauru através do mapa para facilitar a sua vida. Além disso, recomendamos que você registre seus gastos mensais para poder calcular sua média de gastos. Lembre-se de que isso não se limita apenas aos gastos com mercado, mas também com sua alimentação mensal. Esperamos que essa funcionalidade facilite suas compras e ajude você a economizar dinheiro!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="394dp" />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

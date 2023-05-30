@@ -6,13 +6,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import org.w3c.dom.Text;
 
 public class CalcularGastos extends AppCompatActivity {
-    EditText Mercados2, Faculdades2, Moradias2, Transportes2, Resultado2;
+    EditText Mercados2, Faculdades2, Moradias2, Transportes2;
 
-    TextView Mercados, Faculdades, Moradias, Transportes, Resultado;
+    TextView Resultado, Resultado2;;
     Button botao;
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
@@ -21,27 +25,40 @@ public class CalcularGastos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcular_gastos);
 
-        Mercados = (TextView) findViewById(R.id.edtMercados);
-        Moradias = (TextView) findViewById(R.id.edtMoradias);
-        Transportes = (TextView) findViewById(R.id.edtTransportes);
-        Faculdades = (TextView) findViewById(R.id.edtFaculdades);
+        Toolbar toolbar = findViewById(R.id.toolbar_encontre2);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Resultado = (TextView) findViewById(R.id.edtResultado);
         botao = (Button) findViewById(R.id.btnCalcularGastos);
         Mercados2 = (EditText) findViewById(R.id.edtMercados2);
         Moradias2 = (EditText) findViewById(R.id.edtMoradias2);
         Transportes2 = (EditText) findViewById(R.id.edtTransportes2);
         Faculdades2 = (EditText) findViewById(R.id.edtFaculdades2);
-        Resultado2 = (EditText) findViewById(R.id.edtResultado2);
+        Resultado2 = (TextView) findViewById(R.id.edtResultado2);
 
     }
 
-        public void somar(View view){
-            int valorMercados = Integer.parseInt(Mercados2.getText().toString());
-            int valorMoradias = Integer.parseInt(Moradias2.getText().toString());
-            int valorTransportes = Integer.parseInt(Transportes2.getText().toString());
-            int valorFaculdades = Integer.parseInt(Faculdades2.getText().toString());
-            Resultado2.setText(String.valueOf((valorMercados + valorMoradias + valorTransportes + valorFaculdades)));
+    public void somar(View view){
+        String mercados = Mercados2.getText().toString();
+        String moradias = Moradias2.getText().toString();
+        String transportes = Transportes2.getText().toString();
+        String faculdades = Faculdades2.getText().toString();
+
+        if(mercados.isEmpty() || moradias.isEmpty() || transportes.isEmpty() || faculdades.isEmpty()) {
+            Toast.makeText(this, "Por favor, preencha todos os valores.", Toast.LENGTH_SHORT).show();
+        } else {
+            double valorMercados = Double.parseDouble(mercados.replace(",", "."));
+            double valorMoradias = Double.parseDouble(moradias.replace(",", "."));
+            double valorTransportes = Double.parseDouble(transportes.replace(",", "."));
+            double valorFaculdades = Double.parseDouble(faculdades.replace(",", "."));
+            double resultado = valorMercados + valorMoradias + valorTransportes + valorFaculdades;
+            Resultado2.setText("R$ " + String.format("%.2f", resultado));
         }
+    }
+
 
 
 }

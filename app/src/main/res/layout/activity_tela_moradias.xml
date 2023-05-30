@@ -4,30 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape_app_faculdades"
-    tools:context=".TelaMoradias">
+    android:background="@color/white"
+    tools:context=".TelaMoradias"
+    tools:ignore="ExtraText">
 
-    <TextView
-        android:id="@+id/text_encontre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ENCONTRE MORADIAS QUE SEJAM SUA CARA"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="406dp"
+        android:layout_height="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257"
+        app:srcCompat="@drawable/moradias" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_encontre3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_container_laranja2"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnMostrarMapaMoradias"
+        android:layout_width="146dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/mapa" />
+
+    <TextView
+        android:id="@+id/textMoradias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAPA MORADIAS"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1px"
         app:layout_constraintBottom_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="332dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="3.5"
+        android:background="@drawable/shape_container_laranja"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="370dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="Olá! Esta tela tem como objetivo ajudá-lo a encontrar as moradias disponíveis em Bauru através do mapa e tornar mais fácil a sua escolha. Recomendamos que você registre o valor mensal do aluguel para poder calcular sua média de gastos. Esperamos que essa funcionalidade facilite a sua busca por uma moradia e ajude você a encontrar a opção ideal para você!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints,RtlCompat"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="394dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,20 +16,47 @@
         android:theme="@style/Theme.ProjetoTrabalho"
         tools:targetApi="31">
         <activity
-            android:name=".CalcularGastos"
+            android:name=".TelaReferencia"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MapsFaculdades"
             android:exported="false" />
+        <activity
+            android:name=".sobreAplicativo"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TelaEncontra"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".telaCreditos"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalcularGastos"
+            android:exported="false"
+            android:parentActivityName=".TelaEncontra" />
         <activity
             android:name=".TelaFaculdades"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TelaEncontra" />
         <activity
             android:name=".TelaTransportes"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TelaEncontra" />
         <activity
             android:name=".TelaMoradias"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TelaEncontra" />
         <activity
             android:name=".TelaMercados"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TelaEncontra" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -35,6 +66,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDuekj1YN-bDKn1g7LaoeTXYXoaqJdFRy8" />
     </application>
 
 </manifest>
